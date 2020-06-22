@@ -11,7 +11,8 @@ using Microsoft.EntityFrameworkCore;
 namespace WatchDog.API.Controllers
 {
     [ApiVersion("1.0")]
-    [Route("v{v:apiVersion}/products")]
+    // [Route("v{v:apiVersion}/products")]
+    [Route("products")]
     [ApiController]
 
     public class ProductsV1_0Controller : ControllerBase
@@ -136,7 +137,8 @@ namespace WatchDog.API.Controllers
     }
     
     [ApiVersion("2.0")]
-    [Route("v{v:apiVersion}/products")]
+    // [Route("v{v:apiVersion}/products")]
+    [Route("products")]
     [ApiController]
 
     public class ProductsV2_0Controller : ControllerBase

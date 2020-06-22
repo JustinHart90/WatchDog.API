@@ -26,7 +26,7 @@ namespace WatchDog.API.Models
                 new Product { Id = 9, CategoryId = 3, Name = "Potato Chips", Price = 2, IsAvailable = true },
                 new Product { Id = 10, CategoryId = 4, Name = "Cookie", Price = 3, IsAvailable = true },
                 new Product { Id = 11, CategoryId = 4, Name = "Brownie", Price = 3, IsAvailable = true },
-                new Product { Id = 12, CategoryId = 4, Name = "Ice Cream Sundae", Price = 4, IsAvailable = true }
+                new Product { Id = 12, CategoryId = 4, Name = "Ice Cream Sundae", Price = 4, IsAvailable = false }
             );
 
             modelBuilder.Entity<User>().HasData(

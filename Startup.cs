@@ -31,7 +31,10 @@ namespace WatchDog.API
             services.AddDbContext<Models.AppContext>(options =>
                 options.UseInMemoryDatabase("App"));
 
-            services.AddControllers();
+            services.AddControllers()
+                .ConfigureApiBehaviorOptions(options => {
+                    // options.SuppressModelStateInvalidFilter = true;
+                });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

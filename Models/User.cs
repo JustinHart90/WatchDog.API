@@ -11,8 +11,5 @@ namespace WatchDog.API.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-
-        public virtual List<Show> Shows { get; set; }
-        public virtual List<Challenge> Challenges { get; set; }
     }
 }

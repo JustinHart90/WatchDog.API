@@ -13,22 +13,14 @@ namespace WatchDog.API.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Category>().HasMany(c => c.Shows);
-
-            modelBuilder.Entity<Show>().HasOne(b => b.Category);
-            modelBuilder.Entity<Show>().HasOne(b => b.User);
-
-            modelBuilder.Entity<User>().HasMany(c => c.Shows);
+            modelBuilder.Entity<Category>().HasMany(c => c.Products);
+            modelBuilder.Entity<Product>().HasOne(b => b.Category);
 
             modelBuilder.Seed();
         }
 
-        public DbSet<Show> Shows { get; set; }
-
+        public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
-
-        public DbSet<Challenge> Challenges { get; set; }
-
         public DbSet<User> Users { get; set; }
     }
 }
